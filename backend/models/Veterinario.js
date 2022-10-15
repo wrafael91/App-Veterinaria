@@ -35,6 +35,6 @@ const veterinarioSchema = mongoose.Schema({
     }
 })
 
-const Veterinario = mongoose.model("Veterinario", veterinarioSchema)
+const VeterinarioModel = mongoose.model("Veterinario", veterinarioSchema)
 
-export default Veterinario
+export default VeterinarioModel

@@ -1,6 +1,7 @@
 import express from "express"
 import db from "./config/db.js"
 import dotenv from 'dotenv'
+import VeterinarioRoutes from "./routes/veterinarioRoutes.js"
 
 const app = express()
 
@@ -10,9 +11,7 @@ db()
 
 const PORT = process.env.PORT || 4000
 
-app.use("/", (req, res) => {
-    res.send("Hola mundo desde puerto 4000")
-})
+app.use("/api/veterinarios", VeterinarioRoutes)
 
 app.listen(PORT, () => {
     console.log(`Probando desde puerto ${PORT}`)

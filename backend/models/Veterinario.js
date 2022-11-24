@@ -26,7 +26,7 @@ const veterinarioSchema = mongoose.Schema({
         type: String,
         default: null
     },
-    password: {
+    contrasena: {
         type: String,
         required: true
     },

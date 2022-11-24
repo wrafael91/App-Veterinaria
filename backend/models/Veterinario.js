@@ -26,6 +26,10 @@ const veterinarioSchema = mongoose.Schema({
         type: String,
         default: null
     },
+    password: {
+        type: String,
+        required: true
+    },
     token: {
         type: String
     },

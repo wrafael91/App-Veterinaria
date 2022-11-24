@@ -12,12 +12,12 @@ import VeterinarioModel from "../models/Veterinario.js"
 // }
 
 
-const registrar = (req, res) => {
+const registrar = async(req, res) => {
 
     try {     
         const veterinario = new VeterinarioModel(req.body)
-        const veterinarioGuardado = veterinario.save()
-        res.json({msg: "Registrando perfil"})
+        const veterinarioGuardado = await veterinario.save()
+        res.json(veterinarioGuardado)
     } catch (error) {
         console.log(error)
     }
